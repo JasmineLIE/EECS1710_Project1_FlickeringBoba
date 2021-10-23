@@ -43,7 +43,7 @@ void setup() {
   rectMode(CENTER);
   imageMode(CENTER);
   
-  b1 = new Bubbles();
+  b1 = new Bubbles();   //calls on the bubbles object, creates 6 randomized bubbles onto the canvas
   b2 = new Bubbles();
   b3 = new Bubbles();
   b4 = new Bubbles();
@@ -55,8 +55,8 @@ void setup() {
 void draw() {
   background(tank);
  
-b1.overlaps(b2);
-b3.overlaps(b1);
+b1.overlaps(b2);  //calls the overlaps function; when the face interacts with a bubble, the bubbles will start to flicker a strobe light
+b3.overlaps(b1); 
 b2.overlaps(b3);
 b4.overlaps(b5);
 b6.overlaps(b4);
@@ -64,7 +64,7 @@ b5.overlaps(b6);
 
 
  
- b1.display();
+ b1.display();  //ensures the bubbles appear on the canvas
  b2.display();
  b3.display();
  b4.display();
